@@ -35,6 +35,17 @@ import { registerLocaleData } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
+import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
+
+export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
+  align: "left",
+  allowNegative: false,
+  decimal: ",",
+  precision: 2,
+  prefix: "R$ ",
+  suffix: "",
+  thousands: "."
+};
 
 registerLocaleData(localePt);
 
@@ -68,11 +79,15 @@ registerLocaleData(localePt);
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    CurrencyMaskModule
   ],
   providers: [{
     provide: LOCALE_ID,
     useValue: "PT_BR"
+  }, { 
+    provide: CURRENCY_MASK_CONFIG, 
+    useValue: CustomCurrencyMaskConfig 
   }
   ],
   bootstrap: [AppComponent]

@@ -1,11 +1,11 @@
 <mat-card class="mat-card">
     <mat-card-title class="mat-card-title">Novo Produto</mat-card-title>
     <form>
-        <mat-form-field>
+        <mat-form-field class="name">
             <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
+        <mat-form-field class="currency">
+            <input matInput currencyMask placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
         </mat-form-field>
     </form>
 

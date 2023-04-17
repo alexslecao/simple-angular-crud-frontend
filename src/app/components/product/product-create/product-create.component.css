@@ -11,11 +11,14 @@ form {
     flex-direction: column;
 }
 
-.area-botoes {
-    display: flex;
-    justify-content: center;
-}
-
 button {
     margin: 5px;
+}
+
+.currency {
+    max-width: 15rem;
+}
+
+.name {
+    max-width: 15rem;
 }
