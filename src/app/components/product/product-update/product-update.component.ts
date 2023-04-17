@@ -9,7 +9,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product-update.component.css']
 })
 export class ProductUpdateComponent implements OnInit {
-  
+
   product: Product = {
     name: '',
     price: 0.00
@@ -20,13 +20,16 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.productService.readById(this.product.id ?? 0).subscribe(product =>  {
+    this.productService.readById(this.product.id ?? 0).subscribe(product => {
       this.product = product;
-    });  
+    });
   }
 
   update(): void {
-    this.productService.update(this.product).subscribe(() => this.read())
+    this.productService.update(this.product).subscribe(() => {
+      this.productService.showMessage('Produto atualizado com sucesso')
+      this.read()
+    })
   }
 
   read(): void {

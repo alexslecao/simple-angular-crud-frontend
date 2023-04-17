@@ -25,7 +25,10 @@ export class ProductDeleteComponent {
   }
 
   delete(): void {
-    this.productService.delete(this.product.id ?? 0).subscribe(() => this.read())
+    this.productService.delete(this.product.id ?? 0).subscribe(() => {
+      this.productService.showMessage('Produto excluído com sucesso')
+      this.read();
+    })
   }
 
   read(): void {

@@ -19,7 +19,7 @@ export class ProductCreateComponent {
 
   create(): void {
     this.productService.create(this.product).subscribe(() => { 
-      this.productService.showMessage('Agora Foi'); 
+      this.productService.showMessage('Produto incluído com sucesso')
     });
     
     this.readProduct();
