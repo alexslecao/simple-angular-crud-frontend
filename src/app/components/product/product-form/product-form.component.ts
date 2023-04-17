@@ -72,7 +72,7 @@ export class ProductFormComponent implements OnInit {
 
   delete(): void {
     this.productService.delete(this.product.id ?? 0).subscribe(() => {
-      this.productService.showMessage('Produto excluído com sucesso')
+      this.productService.showMessage('Produto excluído com sucesso', true)
       this.read();
     });
   }
