@@ -13,7 +13,7 @@ export class ProductCrudComponent {
   }
 
   navigateToProductCreate(): void {
-    this.router.navigate(["/products/create"]);
+    this.router.navigate(["/product/create"]);
   }
 
 }
