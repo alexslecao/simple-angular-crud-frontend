@@ -1,0 +1,21 @@
+.mat-card {
+    padding: 15px;
+}
+
+.mat-card-title {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.area-botoes {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 5px;
+}
